@@ -29,19 +29,47 @@ const restaurant = {
   categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
   starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
   mainMenu: ['Pizza', 'Pasta', 'Risotto'],
+};
 
-  openingHours: {
-    thu: {
-      open: 12,
-      close: 22,
-    },
-    fri: {
-      open: 11,
-      close: 23,
-    },
-    sat: {
-      open: 0, // Open 24 hours
-      close: 24,
-    },
+let openingHours = {
+  thu: {
+    open: 12,
+    close: 22,
+  },
+  fri: {
+    open: 11,
+    close: 23,
+  },
+  sat: {
+    open: 0, // Open 24 hours
+    close: 24,
   },
 };
+
+let properties = Object.keys(restaurant);
+
+for (const key of properties) {
+  console.log(key);
+  // console.log(restaurant[key]);
+}
+console.log('_____________________');
+console.log(properties[0]);
+console.log('_____________________');
+
+let values = Object.values(restaurant);
+console.log('_____________________');
+for (const value of values) {
+  console.log(value);
+}
+console.log('_____________________');
+console.log(values[0]);
+console.log('_____________________');
+
+let entries = Object.entries(openingHours);
+console.log('_____________________');
+
+for (const [ent, { open, close }] of entries) {
+  console.log(ent);
+  console.log(open);
+  console.log(close);
+}
